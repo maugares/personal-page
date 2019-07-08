@@ -2,9 +2,9 @@ body {
 	background-color: white;
 	color: black;
 	font-size: 16px;
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 0px;
-	margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+	margin: 0;  
+	padding: 0;
 }
 
 .nav {
@@ -13,9 +13,10 @@ body {
 }
 
 .nav ul {
-  margin: 0px;
+  margin: 0;
   list-style-type: none;
-  padding: 0px;
+  padding: 0;
+  font-size: 0;  /* Hack for the empty space in @media nav-bar */
 }
 
 .nav ul li {
@@ -64,4 +65,22 @@ body {
 
 .single-service p {
   padding: 0 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .nav ul {
+    text-align: right;
+  }
+
+  .nav ul li {
+    display: inline-block;
+    border-bottom: 0;
+    border-left: 1px solid black;
+    text-align: left;
+  }
+
+  .single-service {
+    width: 50%;
+    float: left;
+  }
 }
